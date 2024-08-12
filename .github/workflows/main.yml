@@ -19,3 +19,5 @@ jobs:
     - name: Run Gallery
       run: './run-gallery.sh'
       working-directory: './_tools'
+    - name: Git Commands
+      run: git status
