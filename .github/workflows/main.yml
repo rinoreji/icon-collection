@@ -21,9 +21,9 @@ jobs:
       working-directory: './_tools'
     - name: Git Commands
       run: |
+        git config user.email "mailrino@gmail.com"
+        git config user.name "Github Actions"
         git status
         git commit -a
         git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
