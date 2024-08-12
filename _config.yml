@@ -1,6 +1,3 @@
-remote_theme: benc-uk/theme-msdark
+remote_theme: pages-themes/architect@v0.2.0
 title: Azure Icon Collection
 favicon: favicon.png
-buttons:
-  - text: Download All
-    href: https://github.com/benc-uk/icon-collection/archive/master.zip
