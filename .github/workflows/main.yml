@@ -15,5 +15,7 @@ jobs:
       run: cd _tools
     - name: Install dependencies
       run: npm install
+      working-directory: './_tools'
     - name: Build the app
       run: npm run build
+      working-directory: './_tools'
