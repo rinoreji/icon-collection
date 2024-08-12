@@ -22,8 +22,7 @@ jobs:
     - name: Git Commands
       run: |
         git status
-        git add **/index.html
-        git commit -m "Add/update index.html files" || echo "No changes to commit"
+        git commit -m "Add/update index.html files" -a || echo "No changes to commit"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
