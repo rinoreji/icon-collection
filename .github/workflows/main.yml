@@ -16,6 +16,5 @@ jobs:
     - name: Install dependencies
       run: npm install
       working-directory: './_tools'
-    - name: Build the app
-      run: npm run build
-      working-directory: './_tools'
+    - name: Run Gallery
+      run: './_tools/run-gallery.sh'
