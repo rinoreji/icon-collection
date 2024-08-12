@@ -1,3 +1,4 @@
 remote_theme: pages-themes/architect@v0.2.0
 title: Azure Icon Collection
 favicon: favicon.png
+show_downloads: true
