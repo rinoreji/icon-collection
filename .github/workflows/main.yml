@@ -21,6 +21,7 @@ jobs:
       working-directory: './_tools'
     - name: Git Commands
       run: |
+        git status
         git add **/index.html
         git commit -m "Add/update index.html files" || echo "No changes to commit"
         git push
