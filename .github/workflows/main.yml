@@ -17,4 +17,5 @@ jobs:
       run: npm install
       working-directory: './_tools'
     - name: Run Gallery
-      run: './_tools/run-gallery.sh'
+      run: './run-gallery.sh'
+      working-directory: './_tools'
