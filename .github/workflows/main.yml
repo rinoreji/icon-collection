@@ -20,5 +20,10 @@ jobs:
       run: './run-gallery.sh'
       working-directory: './_tools'
     - name: Git Commands
-      run: git add **/index.html && git commit -m "Pipeline commit after running gallery script"
+      run: |
+        git add **/index.html
+        git commit -m "Add/update index.html files" || echo "No changes to commit"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
