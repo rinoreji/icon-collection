@@ -19,7 +19,7 @@ Don’t use Microsoft product icons to represent your product or service
 
 # Icon Galleries
 To view the icons, thumbnail gallery pages for each of the main sets is provided. The gallery pages also allow you to search the icons, view them on a range of light & dark backgrounds and also download the icon in SVG or PNG format.  
-Note. These galleries only work when viewing this repo from GitHub pages here {{site.github.url}}
+Note. These galleries only work when viewing this repo from [GitHub pages here]({{site.github.url}})
 
 If viewing the downloaded icons in Windows, install [PowerToys](https://github.com/microsoft/PowerToys/releases/) and enable the 'File Explorer Preview' module as it supports showing SVGs as thumbnails within explorer
 
