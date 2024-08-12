@@ -10,8 +10,9 @@ jobs:
       with:
         node-version: 20
         cache: 'npm'
-    - name: Change working directory to template
-      run: cd templates
+        cache-dependency-path: './_tools/package-lock.json'
+    - name: Change working directory to _tools
+      run: cd _tools
     - name: Install dependencies
       run: npm install
     - name: Build the app
