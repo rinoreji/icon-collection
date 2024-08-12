@@ -20,4 +20,5 @@ jobs:
       run: './run-gallery.sh'
       working-directory: './_tools'
     - name: Git Commands
-      run: git status
+      run: git add **/index.html && git commit -m "Pipeline commit after running gallery script"
+
