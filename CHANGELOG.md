@@ -16,3 +16,7 @@
 - All Azure Docs icons refreshed with the new Azure branding / style
 - All Azure Patterns icons refreshed with the new Azure branding / style
 - Azure Patterns icons now have names!
+
+
+## July 2024
+- Rebranded more Microsoft Entra ID icons. Added new icons such as AI Content Safety, AKS Automatic, Application Gateway for Containers, and Azure Monitor Pipeline.
