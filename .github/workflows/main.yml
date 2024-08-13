@@ -32,11 +32,3 @@ jobs:
         git add .
         git commit -a -m "Updates by gallery script"
         git push
-        git branch -a
-    - name: git merge to master
-      run: |
-        git fetch origin
-        git checkout master
-        git pull origin master
-        git checkout dev
-        git merge master
