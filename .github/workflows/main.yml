@@ -21,7 +21,7 @@ jobs:
       run: npm install
       working-directory: './_tools'
     - name: Run Gallery
-      run: ./clean-offical.sh && ./run-gallery.sh
+      run: ./setup-icons.sh
       working-directory: './_tools'
     - name: git setup
       run: |

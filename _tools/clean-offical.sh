@@ -3,6 +3,8 @@
 #
 # Cleans up icon set from https://docs.microsoft.com/en-us/azure/architecture/icons/
 #
+cd $1
+pwd
 
 # flatten folder structure
 find . -name "*.svg" | xargs -I file mv file .
