@@ -23,12 +23,14 @@ jobs:
     - name: Run Gallery
       run: './run-gallery.sh'
       working-directory: './_tools'
-    - name: Git Commands
+    - name: git setup
       run: |
         git config user.email "mailrino@gmail.com"
         git config user.name "Github Actions"
-        git status
+    - name: git commit to dev
+      run: |
         git commit -a -m "Updates by gallery script"
         git push
+    - name: git merge to master
+      run: |
         git merge master
-
