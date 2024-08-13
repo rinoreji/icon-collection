@@ -35,4 +35,8 @@ jobs:
         git branch -a
     - name: git merge to master
       run: |
+        git fetch origin
+        git checkout master
+        git pull origin master
+        git checkout dev
         git merge master
