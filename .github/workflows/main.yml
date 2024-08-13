@@ -29,6 +29,7 @@ jobs:
         git config user.name "Github Actions"
     - name: git commit to dev
       run: |
+        git add .
         git commit -a -m "Updates by gallery script"
         git push
     - name: git merge to master
