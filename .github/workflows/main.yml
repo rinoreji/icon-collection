@@ -1,5 +1,7 @@
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - dev
 jobs:
   pre_build:
     name: Prepare index pages
@@ -28,4 +30,5 @@ jobs:
         git status
         git commit -a -m "Updates by gallery script"
         git push
+        git merge master
 
