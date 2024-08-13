@@ -3,7 +3,7 @@
 #
 # Cleans up icon set from https://docs.microsoft.com/en-us/azure/architecture/icons/
 #
-cd $1
+cd ../Azure_Public_Service_Icons
 pwd
 
 # flatten folder structure
