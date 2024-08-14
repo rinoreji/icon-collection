@@ -58,6 +58,11 @@
 
           <section id="icon-links">
             <a href="./links.html">Links</a>
+            {% for post in site.pages %}
+              {% if post.layout == "links" %}
+                <div>{{ post.content | markdownify }}</div>
+              {% endif %}
+            {% endfor %}
           </section>
         </aside>
       </div>
