@@ -25,6 +25,7 @@ If viewing the downloaded icons in Windows, install [PowerToys](https://github.c
 
 ## Core Azure Sets
 
+{% include icons.html %}
 #### ['Official' Azure Icons Set](azure-icons)
 This set is the official downloadable collection from the [Azure Architecture Center](https://docs.microsoft.com/en-us/azure/architecture/icons/), the best place to look if you're after an Azure service or common Azure related icon. The set has been flattened (no sub-directories) and superfluous prefixes removed from the filenames 
 
