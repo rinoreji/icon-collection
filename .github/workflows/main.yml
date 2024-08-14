@@ -1,5 +1,8 @@
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - dev
 jobs:
   pre_build:
     name: Prepare index pages
@@ -19,13 +22,14 @@ jobs:
       run: npm install
       working-directory: './_tools'
     - name: Run Gallery
-      run: './run-gallery.sh'
+      run: ./run-gallery.sh
       working-directory: './_tools'
-    - name: Git Commands
+    - name: git setup
       run: |
         git config user.email "mailrino@gmail.com"
         git config user.name "Github Actions"
-        git status
+    - name: git commit to dev
+      run: |
+        git add .
         git commit -a -m "Updates by gallery script"
         git push
-
