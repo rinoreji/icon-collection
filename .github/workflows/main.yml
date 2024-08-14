@@ -28,8 +28,5 @@ jobs:
       run: |
         git config user.email "mailrino@gmail.com"
         git config user.name "Github Actions"
-    - name: git commit to dev
-      run: |
-        git add .
-        git commit -a -m "Updates by gallery script"
-        git push
+    - name: git commit and push
+      run: ./_tools/commit.sh
