@@ -1,8 +1,6 @@
 #!/bin/bash
-
 # Navigate to the Git repository directory
-cd ..
-
+# cd ..
 # Check if there are any changes
 if git diff-index --quiet HEAD --; then
     # No changes
@@ -17,3 +15,4 @@ else
     # Optionally, push changes to remote repository
     git push
 fi
+# end of file
