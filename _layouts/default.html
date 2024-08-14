@@ -58,8 +58,8 @@
 
           <section id="icon-links">
             <ul class="nav-link">
-              {% for nav-item in site.data.navigation %}
-              <li><a href="{{ nav-item.url | prepend: site.url }}">{{ post.title}}</a></li>
+              {% for item in site.data.navigation %}
+              <li><a href="{{ item.url }}">{{ item.title}}</a></li>
               {% endfor %}
             </ul>
           </section>

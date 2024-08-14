@@ -1,8 +1,8 @@
 - title: Azure Docs
-  url: /azure-docs
+  url: ~/azure-docs
 
 - title: Official Azure Icon Set
-  url: /azure-icons/
+  url: ~/azure-icons
 
 - title: Home
-  url: /
+  url: ~/
