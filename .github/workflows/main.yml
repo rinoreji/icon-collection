@@ -29,4 +29,5 @@ jobs:
         git config user.email "mailrino@gmail.com"
         git config user.name "Github Actions"
     - name: git commit and push
-      run: ./_tools/commit.sh
+      run: ./commit.sh
+      working-directory: './_tools'
