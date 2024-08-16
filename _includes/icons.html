@@ -1,0 +1,6 @@
+{% for item in site.data.navigation %}
+<h4>
+    <a href="{{ item.url }}">{{item.title}}</a>
+</h4>
+{{ item.desc | markdownify }} 
+{% endfor %}
