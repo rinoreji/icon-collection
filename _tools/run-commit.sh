@@ -15,4 +15,4 @@ else
     # Optionally, push changes to remote repository
     git push
 fi
-# end of file
+# ran git update-index --chmod=+x .\run-commit.sh to give this file executable permissions
