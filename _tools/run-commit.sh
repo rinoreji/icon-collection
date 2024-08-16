@@ -1,6 +1,6 @@
 #!/bin/bash
 # Navigate to the Git repository directory
-# cd ..
+cd .. # moving to parent folder to add new files created in icons folder (git add .)
 # Check if there are any changes
 if git diff-index --quiet HEAD --; then
     # No changes
