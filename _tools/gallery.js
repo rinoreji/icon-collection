@@ -14,6 +14,7 @@ if(!DIR || !TITLE) {
 // Prep data to be rendered 
 var data = {}
 data.title = TITLE;
+data.dir = DIR;
 data.images = [];
 
 // Image files
@@ -30,5 +31,6 @@ ejs.renderFile("templates/gallery.ejs", data, {}, function(err, outHtml){
     console.log(err)
   } else {
     fs.writeFileSync(DIR + '/index.html', outHtml);
+    fs.writeFileSync(DIR + '/_img_data.json', JSON.stringify(data));
   }
 });

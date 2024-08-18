@@ -1,6 +1,6 @@
 #!/bin/bash
 # Navigate to the Git repository directory
-# cd ..
+cd .. # moving to parent folder to add new files created in icons folder (git add .)
 # Check if there are any changes
 if git diff-index --quiet HEAD --; then
     # No changes
@@ -15,4 +15,4 @@ else
     # Optionally, push changes to remote repository
     git push
 fi
-# end of file
+# ran git update-index --chmod=+x .\run-commit.sh to give this file executable permissions
