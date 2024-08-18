@@ -165,7 +165,7 @@
 
     function fetchJSONData() {
         const icons_url = "https://github.com/rinoreji/icon-collection/raw/master/_icons.json"
-        fetch("./sample.json")
+        fetch(icons_url)
             .then((res) => {
                 if (!res.ok) {
                     throw new Error
