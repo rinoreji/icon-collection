@@ -14,6 +14,7 @@ if(!DIR || !TITLE) {
 // Prep data to be rendered 
 var data = {}
 data.title = TITLE;
+data.dir = DIR;
 data.images = [];
 
 // Image files
