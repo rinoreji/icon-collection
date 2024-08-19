@@ -1,0 +1,183 @@
+<html lang="en" class="notranslate" translate="no">
+<head>
+  <meta name="google" content="notranslate" />
+  <title>Microsoft Power Platform icons</title>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial;
+      background-color: #aaa;
+      padding: 0;
+      margin: 0;
+    }
+    .bg-0 {
+      background-image: url("https://github.com/rinoreji/icon-collection/raw/master/_tools/background.png")
+    }
+    .bg-1 {
+      background-color: #333;
+    }
+    .bg-2 {
+      background-color: #fff;
+    }
+    .imgbox img { 
+      width: 10.5rem;
+      height: 10.5rem;
+      object-fit: contain;
+      cursor: pointer;
+    }
+    .imgbox {
+      margin: 0.6rem;
+      padding: 0.5rem;
+      text-align: center;
+      width: 12rem;
+      height: 12rem;
+      background-color: #e0e0e0;
+    }
+    h1 {
+      font-size: 1.8rem;
+    }
+    .find, .find input {
+      font-size: 1.1rem;
+    }
+    .top {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      background-color: rgb(211, 211, 211);
+      padding: 0.2rem;
+      padding-top: 0;
+      box-shadow: 0px 5px 18px 3px rgba(0,0,0,0.59);
+    }
+    .top button {
+      float: right; 
+      position: absolute; 
+      top: 0.2rem; 
+      right: 0.2rem;
+      font-size: 1rem;
+      border-radius: 4px;
+    }
+    .pngbox {
+      position: absolute; 
+      top: 2rem; 
+      right: 1rem;
+      font-size: 0.9rem;
+    }
+    input[type="checkbox"] {
+      width: 1.6em;
+      height: 1.6em;
+    }
+    .label {
+      height: 2.5em;
+      line-height: 1em;
+      overflow: hidden;
+      font-size: 0.9rem;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    h1 {
+      display:inline;
+    }
+    .home {
+      font-size: 2rem;
+      text-decoration: none;
+      color:rgb(99, 99, 99);
+    }
+  </style>  
+</head>
+
+<body>
+
+  <div class="top">
+    <a href=".." class="home">&#129093;</a> &nbsp; <h1>Microsoft Power Platform icons</h1>
+    <br/>
+    <span class="find">Finder: <input onkeyup="search()" id="finder">&nbsp; Icons: <span id="count">...</span></span> 
+    <div class="pngbox"><input type="checkbox" id="pngcheck"><label for="pngcheck">Download as PNG</label></div>
+    <button onclick="toggleBg()">Toggle Background</button>
+  </div>
+
+  <div class="grid">
+    
+      <div id="aibuilder_scalable.svg" class="imgbox"><img src="AIBuilder_scalable.svg" class="bg-0" onclick="download('AIBuilder_scalable.svg', this)"/><div class="label">AIBuilder_scalable.svg</div></div>
+    
+      <div id="dataverse_scalable.svg" class="imgbox"><img src="Dataverse_scalable.svg" class="bg-0" onclick="download('Dataverse_scalable.svg', this)"/><div class="label">Dataverse_scalable.svg</div></div>
+    
+      <div id="powerapps_scalable.svg" class="imgbox"><img src="PowerApps_scalable.svg" class="bg-0" onclick="download('PowerApps_scalable.svg', this)"/><div class="label">PowerApps_scalable.svg</div></div>
+    
+      <div id="powerautomate_scalable.svg" class="imgbox"><img src="PowerAutomate_scalable.svg" class="bg-0" onclick="download('PowerAutomate_scalable.svg', this)"/><div class="label">PowerAutomate_scalable.svg</div></div>
+    
+      <div id="powerbi_scalable.svg" class="imgbox"><img src="PowerBI_scalable.svg" class="bg-0" onclick="download('PowerBI_scalable.svg', this)"/><div class="label">PowerBI_scalable.svg</div></div>
+    
+      <div id="powerfx_scalable.svg" class="imgbox"><img src="PowerFx_scalable.svg" class="bg-0" onclick="download('PowerFx_scalable.svg', this)"/><div class="label">PowerFx_scalable.svg</div></div>
+    
+      <div id="powerpages_scalable.svg" class="imgbox"><img src="PowerPages_scalable.svg" class="bg-0" onclick="download('PowerPages_scalable.svg', this)"/><div class="label">PowerPages_scalable.svg</div></div>
+    
+      <div id="powerplatform_scalable.svg" class="imgbox"><img src="PowerPlatform_scalable.svg" class="bg-0" onclick="download('PowerPlatform_scalable.svg', this)"/><div class="label">PowerPlatform_scalable.svg</div></div>
+    
+      <div id="powervirtualagents_scalable.svg" class="imgbox"><img src="PowerVirtualAgents_scalable.svg" class="bg-0" onclick="download('PowerVirtualAgents_scalable.svg', this)"/><div class="label">PowerVirtualAgents_scalable.svg</div></div>
+    
+  </div>
+
+  <script>
+    var bgSetting = 0;
+
+    function toggleBg() {
+      bgSetting++
+      if(bgSetting > 2) bgSetting = 0;
+      for(let img of document.getElementsByTagName("img")) {
+        img.className = `bg-${bgSetting}`;
+      }
+    }
+    
+    function search() {
+      let query = document.getElementById('finder').value.trim().toLowerCase()
+      if(query.length <= 0) {
+        for(let imgbox of document.getElementsByClassName("imgbox")) {
+          imgbox.style.display = "inline-block"
+        }
+      }
+      for(let imgbox of document.getElementsByClassName("imgbox")) {
+        imgbox.style.display = "inline-block"
+        if(!imgbox.id.includes(query)) {
+          imgbox.style.display = "none"
+        }
+      }
+    }
+    
+    function download(f, e) {
+      if(document.getElementById("pngcheck").checked) {
+        var data = getBase64Image(e);
+        let a = document.createElement('a')
+        a.href = "data:application/octet-stream;base64," + data
+        a.download = f.replace('.svg', '.png')
+        a.click()
+      } else {
+        let a = document.createElement('a')
+        a.href = f
+        a.download = f
+        a.click()
+      }
+    }
+    
+    // Actual magic
+    function getBase64Image(img) {
+      var canvas = document.createElement("canvas");
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+      console.log(canvas.width , canvas.height)
+      var ctx = canvas.getContext("2d");
+      ctx.drawImage(img, 0, 0);
+      var dataURL = canvas.toDataURL("image/png");
+      return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+    }
+    
+    function updateCount() {
+      document.querySelector('#count').innerHTML = ''+document.querySelectorAll(".imgbox").length
+    }
+
+    updateCount()
+  </script>
+</body>
+</html>
