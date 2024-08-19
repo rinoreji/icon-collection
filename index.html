@@ -98,7 +98,7 @@
     <button onclick="toggleBg()">Toggle Background</button>
   </div>
 
-  <div class="grid">
+  <div class="grid" id="main_grid">
     
       <div id="abs-member.svg" class="imgbox"><img src="ABS-Member.svg" class="bg-0" onclick="download('ABS-Member.svg', this)"/><div class="label">ABS-Member.svg</div></div>
     
@@ -108,6 +108,14 @@
 
   <script>
     var bgSetting = 0;
+
+    function loadIcons(){
+      let elements = json_data.slice(0,5).map(ico=>
+        `<div id="${ico.name}" class="imgbox"><img src="${ico.path}" class="bg-0" onclick="download('${ico.path}', this)"/><div class="label">${ico.name}</div></div>`
+      );
+      let div = document.getElementById("main_grid");
+      div.innerHTML = elements;
+    }
 
     function toggleBg() {
       bgSetting++
@@ -187,6 +195,7 @@
                         //json_data.push(...imgs);
                     });
                     console.log('imgs', json_data);
+                    loadIcons();
                   })
             .catch((error) => 
                     console.error("Unable to fetch data:", error));
