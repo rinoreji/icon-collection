@@ -125,10 +125,12 @@
     
     function search() {
       let query = document.getElementById('finder').value.trim().toLowerCase()
-      
-      if(query.length <= 0) {
+      if(query.length > 0) {
+        console.log('search', query);
         let icons_data = json_data.filter(ico=>ico.name.toLowerCase().indexOf(query) !== -1);
         showIcons(icons_data);
+      }else{
+        showIcons([]);
       }
       // if(query.length <= 0) {
       //   for(let imgbox of document.getElementsByClassName("imgbox")) {
@@ -199,9 +201,7 @@
                     });
                     showIcons(json_data);
                   })
-            .catch((error) => 
-                    console.error("Unable to fetch data:", error));
-                    return result;
+            .catch((error) => console.error("Unable to fetch data:", error));
     }
 
     fetchJSONData();
