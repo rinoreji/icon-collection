@@ -178,10 +178,13 @@
             .then((data) => {
                     data.forEach(element => {
                         let imgs = element.images.map(f=>{
-                          item=f,
-                          path=`${element.dir}\\${f}`
+                          const img = {};
+                          img.name=f;
+                          img.path=`${element.dir}\\${f}`;
+                          json_data.push(img);
+                          return img;
                         })
-                        json_data.push(...imgs);
+                        //json_data.push(...imgs);
                     });
                     console.log('imgs', json_data);
                   })
