@@ -14,6 +14,22 @@
   url: azure-patterns
   desc: Very large set of 1200+ icons including many Azure services, but mostly focused on other concepts, actions and gyphs. This has been scraped from (https://azure.microsoft.com/en-gb/patterns/styles/glyphs-icons/) This is made public, as part of the "Sundog" Azure.com design system.
 
-- title: "Full Icon Set"
+- title: "Microsoft Dynamics 365 icons"
+  url: d365-icons
+  desc: "This article provides information about the official collection of Microsoft Dynamics 365 icons that you can use in architectural diagrams, training materials, or documentation."
+  
+- title: "Microsoft Entra architecture icons"
+  url: entra-icons
+  desc: "Microsoft Entra architecture icons"
+  
+- title: "Microsoft 365 architecture icons"
+  url: m365-icons
+  desc: "Microsoft 365 architecture icons"
+  
+- title: "Microsoft Power Platform icons"
+  url: power-platform-icons
+  desc: "Microsoft Power Platform icons"
+
+  - title: "Full Icon Set"
   url: fullset
   desc: "All icons under this repo"
