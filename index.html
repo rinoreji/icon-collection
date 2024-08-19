@@ -173,8 +173,10 @@
                 }
                 return res.json();
             })
-            .then((data) => 
-                    console.log(data))
+            .then((data) => {
+              console.log('fetchJSONData',data);
+              return res.json();
+                  })
             .catch((error) => 
                     console.error("Unable to fetch data:", error));
     }
