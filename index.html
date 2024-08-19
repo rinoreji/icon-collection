@@ -1,7 +1,7 @@
 <html lang="en" class="notranslate" translate="no">
 <head>
   <meta name="google" content="notranslate" />
-  <title>Official Azure Icon Set</title>
+  <title>Full Icon Set</title>
   <link rel="icon" type="image/png" href="../favicon.png">
   <style>
     body {
@@ -99,22 +99,20 @@
   </div>
 
   <div class="grid" id="main_grid">
-    
-      <div id="abs-member.svg" class="imgbox"><img src="ABS-Member.svg" class="bg-0" onclick="download('ABS-Member.svg', this)"/><div class="label">ABS-Member.svg</div></div>
-    
-      <div id="ai-studio.svg" class="imgbox"><img src="AI-Studio.svg" class="bg-0" onclick="download('AI-Studio.svg', this)"/><div class="label">AI-Studio.svg</div></div>
-    
+      <!-- <div id="ai-studio.svg" class="imgbox"><img src="AI-Studio.svg" class="bg-0" onclick="download('AI-Studio.svg', this)"/><div class="label">AI-Studio.svg</div></div> -->
   </div>
 
   <script>
     var bgSetting = 0;
 
-    function loadIcons(){
-      let elements = json_data.slice(0,5).map(ico=>
+    function showIcons(icons_data){
+      let elements = icons_data.slice(0,50).map(ico=>
         `<div id="${ico.name}" class="imgbox"><img src="${ico.path}" class="bg-0" onclick="download('${ico.path}', this)"/><div class="label">${ico.name}</div></div>`
       );
       let div = document.getElementById("main_grid");
       div.innerHTML = elements;
+
+      updateCount();
     }
 
     function toggleBg() {
@@ -127,17 +125,22 @@
     
     function search() {
       let query = document.getElementById('finder').value.trim().toLowerCase()
+      
       if(query.length <= 0) {
-        for(let imgbox of document.getElementsByClassName("imgbox")) {
-          imgbox.style.display = "inline-block"
-        }
+        let icons_data = json_data.filter(ico=>ico.name.toLowerCase().indexOf(query) !== -1);
+        showIcons(icons_data);
       }
-      for(let imgbox of document.getElementsByClassName("imgbox")) {
-        imgbox.style.display = "inline-block"
-        if(!imgbox.id.includes(query)) {
-          imgbox.style.display = "none"
-        }
-      }
+      // if(query.length <= 0) {
+      //   for(let imgbox of document.getElementsByClassName("imgbox")) {
+      //     imgbox.style.display = "inline-block"
+      //   }
+      // }
+      // for(let imgbox of document.getElementsByClassName("imgbox")) {
+      //   imgbox.style.display = "inline-block"
+      //   if(!imgbox.id.includes(query)) {
+      //     imgbox.style.display = "none"
+      //   }
+      // }
     }
     
     function download(f, e) {
@@ -194,17 +197,15 @@
                         })
                         //json_data.push(...imgs);
                     });
-                    console.log('imgs', json_data);
-                    loadIcons();
+                    showIcons();
                   })
             .catch((error) => 
                     console.error("Unable to fetch data:", error));
                     return result;
     }
 
-    updateCount()
     fetchJSONData();
-    
+    updateCount();
   </script>
 </body>
 </html>
