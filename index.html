@@ -176,9 +176,14 @@
                 return res.json();
             })
             .then((data) => {
-              json_data = data;
-                    console.log(data);
-                    console.log(json_data.map(section=> section.images.map(f=> `${section.dir}\\${f}`) ));
+                    data.forEach(element => {
+                        let imgs = element.images.map(f=>{
+                          item=f,
+                          path=`${element.dir}\\${f}`
+                        })
+                        json_data.push(...imgs);
+                    });
+                    console.log('imgs', json_data);
                   })
             .catch((error) => 
                     console.error("Unable to fetch data:", error));
