@@ -180,7 +180,8 @@
     }
 
     updateCount()
-    fetchJSONData();
+    let json_data = fetchJSONData();
+    console.log(json_data.map(section=> section.images.map(f=> `${section.dir}\\${f}`) ));
   </script>
 </body>
 </html>
