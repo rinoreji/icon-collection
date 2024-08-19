@@ -19,10 +19,8 @@ let data = [];
 // Iterate over the matched files
 files.forEach(file => {
     let img_data = JSON.parse(fs.readFileSync(file));
-    img_data.dir=path.dirname(file);
-    console.log(img_data.dir);
-    //img_data.images.map(f=> data.push(path.join(dir,f)));
+    img_data.dir=path.dirname(file).replace(/^\.{0,2}[\\,\/]{0,2}/,'/');
     data.push(img_data);
 });
 
-fs.writeFileSync(path.join(root_dir, '/_icons.json'), JSON.stringify(data));
+fs.writeFileSync(path.join(root_dir, '/icons.json'), JSON.stringify(data));
