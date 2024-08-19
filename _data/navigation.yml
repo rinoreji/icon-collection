@@ -13,4 +13,7 @@
 - title: Azure Patterns Collection
   url: azure-patterns
   desc: Very large set of 1200+ icons including many Azure services, but mostly focused on other concepts, actions and gyphs. This has been scraped from (https://azure.microsoft.com/en-gb/patterns/styles/glyphs-icons/) This is made public, as part of the "Sundog" Azure.com design system.
-  
+
+- title: "Full Icon Set"
+  url: fullset
+  desc: "All icons under this repo"
