@@ -163,9 +163,11 @@
       document.querySelector('#count').innerHTML = ''+document.querySelectorAll(".imgbox").length
     }
 
+    let json_data = [];
+
     function fetchJSONData() {
-        const icons_url = "https://github.com/rinoreji/icon-collection/raw/master/_icons.json"
-        fetch("./sample.json")
+        const icons_url = "https://rinoreji.github.io/icon-collection/icons.json"
+        fetch(icons_url)
             .then((res) => {
                 if (!res.ok) {
                     throw new Error
@@ -173,14 +175,19 @@
                 }
                 return res.json();
             })
-            .then((data) => 
-                    console.log(data))
+            .then((data) => {
+              json_data = data;
+                    console.log(data);
+                    console.log(json_data.map(section=> section.images.map(f=> `${section.dir}\\${f}`) ));
+                  })
             .catch((error) => 
                     console.error("Unable to fetch data:", error));
+                    return result;
     }
 
     updateCount()
     fetchJSONData();
+    
   </script>
 </body>
 </html>
