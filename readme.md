@@ -64,6 +64,9 @@ Huge set of over 5,000 icons, free set of over 1,500 which can be downloaded as 
 ##### [Amazing Icon Downloader ⇗](https://chrome.google.com/webstore/detail/amazing-icon-downloader/kllljifcjfleikiipbkdcgllbllahaob?hl=en)
 Not a set of icons, but a browser extension for Chrome and Edge which allows you to easily grab icons from the Azure portal
 
+##### [Apache Logos ⇗](https://www.apache.org/logos/)
+Logos and icons for apache projects
+
 ---
 
 # Scraping & Other Tools
